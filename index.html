@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Александр Белых — сайты, которые приносят заявки</title>
+<meta name="description" content="Сайты и автоматизация для малого бизнеса в Ставрополе и по всей России. Заявки с сайта сразу в Telegram.">
+<meta name="theme-color" content="#E9ECF2">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Александр Белых — сайты, которые приносят заявки">
+<meta property="og:description" content="Сайты и автоматизация для малого бизнеса в Ставрополе и по всей России. Заявки с сайта сразу в Telegram.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2312172B'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-weight='900' font-size='34' text-anchor='middle' fill='%233B5BFD'%3EА%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Александр Белых — веб-разработчик",
+  "description": "Сайты и автоматизация для малого бизнеса. Заявки с сайта в Telegram.",
+  "email": "alex.sites26@mail.ru",
+  "areaServed": "RU",
+  "address": { "@type": "PostalAddress", "addressLocality": "Ставрополь", "addressCountry": "RU" },
+  "priceRange": "от 2 000 ₽",
+  "sameAs": ["https://t.me/AlexanderBelyh", "https://www.avito.ru/user/ec0455e30a5288c1140f5b6ba18a741c/profile"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fog:#E9ECF2;      /* фон */
+  --paper:#F6F7FA;    /* светлые поверхности */
+  --ink:#12172B;      /* текст и тёмные блоки */
+  --cobalt:#3B5BFD;   /* главный акцент */
+  --mint:#2FBF97;     /* «пришла заявка» */
+  --muted:#5F667C;    /* второстепенный текст */
+  --line:rgba(18,23,43,.12);
+  --display:"Unbounded",system-ui,sans-serif;
+  --body:"Manrope",system-ui,sans-serif;
+  --gutter:clamp(16px,4vw,56px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{overflow-x:clip;background:var(--fog);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:6px}
+.wrap{padding:0 var(--gutter);max-width:1360px;margin:0 auto}
+
+/* ---------- шапка ---------- */
+.top{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s}
+.top.scrolled{background:rgba(233,236,242,.86);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.logo{font-family:var(--display);font-weight:600;font-size:15px;text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.logo span{color:var(--muted);font-weight:400}
+.nav{display:flex;gap:28px;font-size:15px;white-space:nowrap}
+.nav a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;border:0;cursor:pointer;font:600 15px var(--body);text-decoration:none;padding:14px 22px;border-radius:999px;background:var(--ink);color:var(--paper);will-change:transform}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.blue{background:var(--cobalt);color:#fff}
+.btn svg{width:18px;height:18px}
+.btn{white-space:nowrap}
+.top .btn{gap:0}
+@media (max-width:1180px){.logo span{display:none}}
+@media (max-width:900px){.nav{display:none}.top .btn{padding:11px 16px;font-size:14px}}
+@media (max-width:420px){.top .btn .long{display:none}}
+
+/* ---------- первый экран ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+.hero .glow{position:absolute;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(59,91,253,.22),transparent 65%);left:0;top:0;pointer-events:none;transform:translate(-50%,-50%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.25fr .9fr;gap:56px;align-items:center;width:100%}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(40px,7.2vw,104px);line-height:.95;letter-spacing:-.045em}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ch{display:inline-block;will-change:transform}
+.hero h1 .outline{-webkit-text-stroke:2px var(--ink);color:transparent}
+.hero p.lead{margin-top:28px;max-width:34ch;font-size:clamp(17px,1.5vw,20px);color:var(--muted)}
+.hero .ctas{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* лента заявок */
+.feed{position:relative;background:var(--ink);color:var(--paper);border-radius:28px;padding:22px;height:460px;display:flex;flex-direction:column;box-shadow:0 40px 80px -30px rgba(18,23,43,.55);overflow:hidden}
+.feed-head{display:flex;align-items:center;gap:12px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.1)}
+.feed-ava{width:40px;height:40px;border-radius:50%;background:var(--cobalt);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:15px}
+.feed-head b{display:block;font-size:15px}
+.feed-head small{color:#9aa2bd;font-size:13px}
+.feed-dot{width:8px;height:8px;border-radius:50%;background:var(--mint);display:inline-block;margin-right:6px;box-shadow:0 0 0 0 rgba(47,191,151,.6);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(47,191,151,0)}100%{box-shadow:0 0 0 0 rgba(47,191,151,0)}}
+.feed-list{flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column;gap:12px;margin-top:18px;-webkit-mask-image:linear-gradient(#000 70%,transparent);mask-image:linear-gradient(#000 70%,transparent)}
+.msg{flex:none}
+.msg{background:#1E2540;border-radius:16px 16px 16px 4px;padding:14px 16px;font-size:14.5px;line-height:1.45}
+.msg .t{display:flex;justify-content:space-between;gap:12px;font-weight:700;margin-bottom:4px}
+.msg .t em{font-style:normal;color:var(--mint);font-weight:600;font-size:12.5px;white-space:nowrap}
+.msg .d{color:#c3c9de}
+.feed-note{padding-top:14px;font-size:12.5px;color:#7d86a5}
+@media (max-width:960px){.hero .wrap{grid-template-columns:1fr}.feed{height:420px}}
+
+/* ---------- бегущая строка ---------- */
+.marquee{background:var(--cobalt);color:#fff;overflow:hidden;padding:22px 0;transform:rotate(-1.6deg);margin:20px -20px}
+.marquee .track{display:flex;width:max-content;font-family:var(--display);font-weight:600;font-size:clamp(20px,2.6vw,34px);letter-spacing:-.02em}
+.marquee .track span{padding:0 28px;white-space:nowrap}
+.marquee .track span::after{content:"";display:inline-block;width:.42em;height:.42em;border-radius:50%;background:var(--mint);margin-left:56px;vertical-align:middle}
+
+/* ---------- заголовки разделов ---------- */
+section{position:relative}
+.sec{padding:clamp(90px,12vw,170px) 0}
+.h2{font-family:var(--display);font-weight:800;font-size:clamp(32px,5vw,68px);line-height:1;letter-spacing:-.04em;max-width:16ch}
+.h2 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.h2 .ln > span{display:inline-block}
+.sub{margin-top:20px;color:var(--muted);max-width:52ch;font-size:18px}
+
+/* ---------- путь заявки (горизонтальный скролл) ---------- */
+.path{background:var(--ink);color:var(--paper);overflow:hidden}
+.path .intro{padding-top:clamp(90px,12vw,150px)}
+.path .h2{color:var(--paper)}
+.path .sub{color:#9aa2bd}
+.rail{display:flex;gap:28px;padding:64px var(--gutter) clamp(90px,10vw,140px);width:max-content}
+.step{width:min(78vw,460px);flex:none;background:#1A2039;border-radius:28px;padding:30px;display:flex;flex-direction:column;gap:22px;min-height:440px}
+.step .n{font-family:var(--display);font-weight:800;font-size:72px;line-height:1;color:transparent;-webkit-text-stroke:1.5px #3d4566}
+.step h3{font-family:var(--display);font-weight:600;font-size:24px;letter-spacing:-.02em;line-height:1.15}
+.step p{color:#aab1c9;font-size:16px}
+.vis{margin-top:auto;height:150px;border-radius:18px;background:#232A47;position:relative;overflow:hidden}
+/* мини-иллюстрации */
+.v-search{padding:18px}
+.v-search .bar{height:40px;border-radius:12px;background:#fff;color:var(--ink);display:flex;align-items:center;padding:0 14px;font-size:14px;font-weight:500}
+.v-search .bar i{width:2px;height:18px;background:var(--cobalt);margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.v-search .res{height:10px;border-radius:5px;background:#3a4266;margin-top:14px}
+.v-search .res.hl{background:var(--cobalt);width:70%}
+.v-search .res:nth-child(4){width:85%}
+.v-phone{display:grid;place-items:center}
+.v-phone .ph{width:84px;height:130px;border-radius:16px;border:3px solid #4a5378;padding:8px;display:flex;flex-direction:column;gap:6px}
+.v-phone .ph b{height:22px;border-radius:5px;background:var(--cobalt)}
+.v-phone .ph i{height:6px;border-radius:3px;background:#4a5378}
+.v-phone .ph i:nth-child(3){width:70%}
+.v-phone .ph u{margin-top:auto;height:18px;border-radius:9px;background:var(--mint)}
+.v-form{padding:18px;display:flex;flex-direction:column;gap:10px}
+.v-form .f{height:34px;border-radius:10px;background:#323a5e;display:flex;align-items:center;padding:0 12px;font-size:13px;color:#cfd5ea}
+.v-form .go{height:34px;border-radius:10px;background:var(--mint);color:var(--ink);font-weight:700;font-size:13px;display:grid;place-items:center}
+.v-tg{display:grid;place-items:center}
+.v-tg .bubble{background:#fff;color:var(--ink);border-radius:16px 16px 16px 4px;padding:12px 16px;font-size:13.5px;font-weight:600;box-shadow:0 12px 30px -10px rgba(0,0,0,.5);display:flex;gap:10px;align-items:center}
+.v-tg .bubble s{text-decoration:none;width:26px;height:26px;border-radius:50%;background:var(--cobalt);display:grid;place-items:center;color:#fff;font-size:13px}
+@media (max-width:899px){.rail{flex-direction:column;width:auto}.step{width:100%;min-height:auto}}
+
+/* ---------- услуги и цены ---------- */
+.prices{margin-top:56px;border-top:1.5px solid var(--ink)}
+.row{position:relative;display:grid;grid-template-columns:1fr auto;gap:8px 32px;align-items:baseline;padding:26px 0;border-bottom:1px solid var(--line);cursor:default;isolation:isolate}
+.row::before{content:"";position:absolute;inset:0 calc(-1 * var(--gutter));background:var(--paper);z-index:-1;transform:scaleY(0);transform-origin:bottom;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.row h3{font-family:var(--display);font-weight:600;font-size:clamp(20px,2.4vw,30px);letter-spacing:-.025em;line-height:1.15;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+@media (hover:hover){.row:hover::before{transform:scaleY(1)}.row:hover h3{transform:translateX(14px)}}
+.row .price{font-family:var(--display);font-weight:600;font-size:clamp(18px,2vw,26px);white-space:nowrap;color:var(--cobalt)}
+.row p{grid-column:1/-1;color:var(--muted);max-width:60ch;font-size:16px}
+@media (max-width:560px){.row{grid-template-columns:1fr;gap:6px}.row .price{font-size:17px}}
+.note{margin-top:22px;color:var(--muted);font-size:15px}
+
+/* ---------- почему спокойно ---------- */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.card{background:var(--paper);border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:14px;transform-style:preserve-3d;will-change:transform}
+.card .ico{width:52px;height:52px;border-radius:14px;background:var(--fog);display:grid;place-items:center;color:var(--cobalt)}
+.card .ico svg{width:26px;height:26px}
+.card h3{font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:-.02em;line-height:1.2}
+.card p{color:var(--muted);font-size:16px}
+.card.big{background:var(--cobalt);color:#fff}
+.card.big .ico{background:rgba(255,255,255,.16);color:#fff}
+.card.big p{color:#dfe5ff}
+@media (max-width:900px){.why{grid-template-columns:1fr}}
+
+/* ---------- этапы ---------- */
+.steps{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
+.steps .progress{position:absolute;left:28px;right:calc((100% - 60px) / 4 - 28px);top:27px;height:2px;background:var(--line)}
+.steps .progress i{display:block;height:100%;background:var(--cobalt);transform:scaleX(0);transform-origin:left}
+.st{position:relative}
+.st .dot{width:56px;height:56px;border-radius:50%;background:var(--fog);box-shadow:inset 0 0 0 2px var(--ink);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:18px;position:relative;z-index:1;transition:background .3s,color .3s,box-shadow .3s}
+.st.on .dot{background:var(--ink);color:var(--paper)}
+.st h3{margin-top:22px;font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:-.02em}
+.st p{margin-top:8px;color:var(--muted);font-size:15.5px}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr;row-gap:40px}.steps .progress{display:none}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* ---------- контакты ---------- */
+.contact{background:var(--ink);color:var(--paper);border-radius:40px 40px 0 0;overflow:hidden}
+.contact .wrap{padding-top:clamp(90px,12vw,160px);padding-bottom:60px}
+.big-cta{font-family:var(--display);font-weight:800;font-size:clamp(40px,8vw,120px);line-height:.95;letter-spacing:-.05em;text-decoration:none;display:inline-block}
+.big-cta .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.big-cta .ln > span{display:inline-block}
+.big-cta:hover .ln > span{color:var(--cobalt)}
+.contact .sub{color:#9aa2bd}
+.links{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.14)}
+.links a{padding:26px 0;text-decoration:none;display:flex;flex-direction:column;gap:6px;border-bottom:1px solid rgba(255,255,255,.14)}
+.links a + a{padding-left:28px;border-left:1px solid rgba(255,255,255,.14)}
+.links small{color:#7d86a5;font-size:14px}
+.links b{font-family:var(--display);font-weight:600;font-size:clamp(17px,1.8vw,22px);letter-spacing:-.02em;transition:color .2s}
+.links a:hover b{color:var(--mint)}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#7d86a5;font-size:14px;padding-top:48px}
+@media (max-width:820px){.links{grid-template-columns:1fr}.links a + a{padding-left:0;border-left:0}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#hero">Александр Белых <span>/ веб-разработчик</span></a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#path">Как это работает</a>
+      <a href="#prices">Услуги и цены</a>
+      <a href="#steps">Этапы</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <a class="btn magnet" href="https://t.me/AlexanderBelyh" target="_blank" rel="noopener"><span class="long">Написать в&nbsp;</span>Telegram</a>
+  </div>
+</header>
+
+<main>
+<!-- ПЕРВЫЙ ЭКРАН -->
+<section class="hero" id="hero">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <h1 aria-label="Сайты, которые приносят заявки">
+        <span class="ln split" aria-hidden="true">Сайты,</span>
+        <span class="ln split outline" aria-hidden="true">которые</span>
+        <span class="ln split" aria-hidden="true">приносят</span>
+        <span class="ln split" aria-hidden="true">заявки</span>
+      </h1>
+      <p class="lead hero-fade">Делаю сайты и автоматизацию для малого бизнеса в Ставрополе и по всей России. Клиент оставляет заявку — вы сразу получаете её в Telegram.</p>
+      <div class="ctas hero-fade">
+        <a class="btn blue magnet" href="https://t.me/AlexanderBelyh" target="_blank" rel="noopener">Обсудить проект</a>
+        <a class="btn ghost magnet" href="#prices">Посмотреть цены</a>
+      </div>
+    </div>
+
+    <div class="feed hero-feed" aria-label="Пример: так выглядят заявки с сайта в Telegram">
+      <div class="feed-head">
+        <div class="feed-ava" aria-hidden="true">З</div>
+        <div><b>Заявки с сайта</b><small><span class="feed-dot"></span>бот онлайн</small></div>
+      </div>
+      <div class="feed-list" id="feed" aria-live="off"></div>
+      <div class="feed-note">Пример уведомлений. Так заявки приходят владельцу бизнеса.</div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track" id="track"></div>
+</div>
+
+<!-- ПУТЬ ЗАЯВКИ -->
+<section class="path" id="path">
+  <div class="wrap intro">
+    <h2 class="h2 reveal"><span class="ln"><span>Путь от поиска</span></span><span class="ln"><span>до вашей заявки</span></span></h2>
+    <p class="sub">Красивый сайт без заявок — это расход. Я собираю всю цепочку: чтобы вас нашли, поняли с телефона и смогли написать за полминуты.</p>
+  </div>
+  <div class="pin-wrap">
+    <div class="rail" id="rail">
+      <article class="step">
+        <div class="n">1</div>
+        <h3>Человек ищет услугу</h3>
+        <p>Настраиваю базовое SEO и карточку на Яндекс Картах, чтобы вас находили по запросам в вашем районе.</p>
+        <div class="vis v-search" aria-hidden="true">
+          <div class="bar">стоматология рядом<i></i></div>
+          <div class="res hl"></div><div class="res"></div><div class="res"></div>
+        </div>
+      </article>
+      <article class="step">
+        <div class="n">2</div>
+        <h3>Открывает сайт с телефона</h3>
+        <p>Большинство клиентов приходит с мобильного. Сайт быстро грузится и сразу показывает, чем вы полезны.</p>
+        <div class="vis v-phone" aria-hidden="true"><div class="ph"><b></b><i></i><i></i><i></i><u></u></div></div>
+      </article>
+      <article class="step">
+        <div class="n">3</div>
+        <h3>Оставляет заявку</h3>
+        <p>Короткая форма: имя и телефон. Никаких длинных анкет, после которых человек закрывает вкладку.</p>
+        <div class="vis v-form" aria-hidden="true"><div class="f">Имя</div><div class="f">+7 ___ ___-__-__</div><div class="go">Записаться</div></div>
+      </article>
+      <article class="step">
+        <div class="n">4</div>
+        <h3>Вы узнаёте об этом сразу</h3>
+        <p>Заявка мгновенно приходит в Telegram вам или администратору. Ни одно обращение не теряется в почте.</p>
+        <div class="vis v-tg" aria-hidden="true"><div class="bubble"><s>!</s>Новая заявка с сайта</div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- УСЛУГИ И ЦЕНЫ -->
+<section class="sec" id="prices">
+  <div class="wrap">
+    <h2 class="h2 reveal"><span class="ln"><span>Услуги и цены</span></span></h2>
+    <p class="sub">Итоговую стоимость называю после короткого разговора о задаче. Оценка бесплатная.</p>
+    <div class="prices">
+      <div class="row"><h3>Сайт-визитка</h3><span class="price">от 12 000 ₽</span><p>Одна страница о вашем бизнесе: услуги, цены, контакты, карта и форма заявки.</p></div>
+      <div class="row"><h3>Лендинг под рекламу</h3><span class="price">от 12 000 ₽</span><p>Страница под одну услугу или акцию. Подходит для рекламы в Яндексе и ВКонтакте.</p></div>
+      <div class="row"><h3>Корпоративный сайт</h3><span class="price">от 30 000 ₽</span><p>Несколько страниц: услуги, команда, работы, отзывы, документы. С удобной админкой.</p></div>
+      <div class="row"><h3>Интернет-магазин</h3><span class="price">от 25 000 ₽</span><p>Каталог, корзина, приём заказов. Сложность и цена зависят от количества товаров и функций.</p></div>
+      <div class="row"><h3>Редизайн сайта</h3><span class="price">от 15 000 ₽</span><p>Обновляю устаревший сайт: современный вид, мобильная версия, понятная структура.</p></div>
+      <div class="row"><h3>Заявки в Telegram</h3><span class="price">от 3 000 ₽</span><p>Подключаю к вашему текущему сайту уведомления о заявках в Telegram.</p></div>
+      <div class="row"><h3>Доработка сайта</h3><span class="price">от 2 000 ₽</span><p>Исправлю ошибки, добавлю блок или страницу, ускорю загрузку.</p></div>
+    </div>
+    <p class="note">Работаю по договору, предоплата 50%. Домен, хостинг и все доступы оформляются на вас.</p>
+  </div>
+</section>
+
+<!-- ПОЧЕМУ СПОКОЙНО -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="h2 reveal"><span class="ln"><span>Почему со мной</span></span><span class="ln"><span>спокойно</span></span></h2>
+    <div class="why">
+      <div class="card big tilt">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Безопасность — моя специальность</h3>
+        <p>Учусь на специалиста по информационной безопасности. HTTPS, защита форм от спама и аккуратная работа с персональными данными — по умолчанию.</p>
+      </div>
+      <div class="card tilt">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div>
+        <h3>Договор и понятные этапы</h3>
+        <p>Фиксируем объём и сроки заранее. Показываю промежуточные результаты, чтобы вы видели, за что платите.</p>
+      </div>
+      <div class="card tilt">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></svg></div>
+        <h3>Всё принадлежит вам</h3>
+        <p>Домен, хостинг и доступы оформлены на вас. Если захотите работать с другим разработчиком, ничего не придётся «выкупать».</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ЭТАПЫ -->
+<section class="sec" id="steps" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="h2 reveal"><span class="ln"><span>Как проходит работа</span></span></h2>
+    <div class="steps" id="stepsGrid">
+      <div class="progress" aria-hidden="true"><i id="stepsBar"></i></div>
+      <div class="st"><div class="dot">1</div><h3>Разговор</h3><p>Обсуждаем задачу, бюджет и сроки. Бесплатно и без обязательств.</p></div>
+      <div class="st"><div class="dot">2</div><h3>Структура и дизайн</h3><p>Согласовываем, что будет на сайте и как он будет выглядеть.</p></div>
+      <div class="st"><div class="dot">3</div><h3>Разработка</h3><p>Делаю сайт и показываю промежуточные версии. Вношу правки.</p></div>
+      <div class="st"><div class="dot">4</div><h3>Запуск</h3><p>Публикую сайт, подключаю заявки и передаю все доступы. Объясняю, как им пользоваться.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <a class="big-cta reveal" href="https://t.me/AlexanderBelyh" target="_blank" rel="noopener">
+      <span class="ln"><span>Расскажите</span></span><span class="ln"><span>о задаче</span></span>
+    </a>
+    <p class="sub">Отвечу в течение дня и бесплатно оценю проект. Если у вас уже есть сайт, скажу, что мешает ему приводить клиентов.</p>
+    <div class="links">
+      <a href="https://t.me/AlexanderBelyh" target="_blank" rel="noopener"><small>Telegram</small><b>@AlexanderBelyh</b></a>
+      <a href="mailto:alex.sites26@mail.ru"><small>Почта</small><b>alex.sites26@mail.ru</b></a>
+      <a href="https://www.avito.ru/user/ec0455e30a5288c1140f5b6ba18a741c/profile" target="_blank" rel="noopener"><small>Отзывы</small><b>Профиль на Авито</b></a>
+    </div>
+    <div class="foot"><span>© <span id="year">2026</span> Александр Белых</span><span>Ставрополь · работаю по всей России</span></div>
+  </div>
+</section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(() => {
+  /* ---------- данные ---------- */
+  const leads = [
+    ["Стоматология", "Анна, запись на чистку, удобно после 18:00"],
+    ["Автосервис", "Игорь, замена масла, Kia Rio, на субботу"],
+    ["Салон красоты", "Мария, маникюр + покрытие, завтра утром"],
+    ["Юридические услуги", "Олег, консультация по договору аренды"],
+    ["Ремонт квартир", "Светлана, расчёт ремонта ванной 5 м²"],
+    ["Кофейня", "Дмитрий, заказ кофе-брейка на 20 человек"],
+    ["Фитнес-студия", "Екатерина, пробное занятие по пилатесу"],
+    ["Клининг", "Артём, уборка после ремонта, 60 м²"]
+  ];
+  const niches = ["стоматологии","автосервисы","салоны красоты","юристы","кофейни","строители","фитнес-студии","клининг","магазины","мастерские"];
+
+  /* бегущая строка: два одинаковых набора для бесшовного цикла */
+  const track = document.getElementById("track");
+  const set = niches.map(n => `<span>${n}</span>`).join("");
+  track.innerHTML = set + set;
+
+  /* разбиваем заголовок первого экрана на буквы */
+  document.querySelectorAll(".split").forEach(el => {
+    el.innerHTML = [...el.textContent].map(c => `<span class="ch">${c === " " ? "&nbsp;" : c}</span>`).join("");
+  });
+
+  /* лента заявок */
+  const feed = document.getElementById("feed");
+  let li = 0;
+  const addLead = (animate) => {
+    const [title, desc] = leads[li++ % leads.length];
+    const m = document.createElement("div");
+    m.className = "msg";
+    m.innerHTML = `<div class="t"><span>${title}</span><em>только что</em></div><div class="d">${desc}</div>`;
+    feed.prepend(m);
+    feed.querySelectorAll(".msg").forEach((x, i) => { if (i) x.querySelector("em").textContent = (i * 3) + " мин назад"; });
+    while (feed.children.length > 4) feed.lastElementChild.remove();
+    if (animate && window.gsap) gsap.from(m, { y: -24, opacity: 0, scale: .96, duration: .6, ease: "back.out(1.6)" });
+  };
+  for (let i = 0; i < 3; i++) addLead(false);
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* шапка */
+  const top =document.getElementById("top");
+  const onScroll = () => top.classList.toggle("scrolled", scrollY > 20);
+  addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!window.gsap || reduce) {
+    if (!reduce) setInterval(() => addLead(false), 3200);
+    document.querySelectorAll(".st").forEach(s => s.classList.add("on"));
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* 1. Открывающая сцена: буквы выезжают снизу, затем текст и лента */
+  const intro = gsap.timeline({ defaults: { ease: "expo.out" } });
+  intro.from(".hero h1 .ch", { yPercent: 115, rotate: 8, duration: 1.1, stagger: .022 }, 0.1)
+       .from(".hero-fade", { y: 24, opacity: 0, duration: .9, stagger: .12 }, "-=0.7")
+       .from(".hero-feed", { y: 60, opacity: 0, rotate: 3, duration: 1.2 }, "-=0.9")
+       .from(".top .wrap > *", { y: -20, opacity: 0, duration: .8, stagger: .08 }, 0.2);
+
+  /* новые заявки каждые ~3 секунды, пока первый экран виден */
+  let feedTimer = null;
+  ScrollTrigger.create({
+    trigger: ".hero", start: "top bottom", end: "bottom top",
+    onToggle: self => {
+      clearInterval(feedTimer);
+      if (self.isActive) feedTimer = setInterval(() => { if (!document.hidden) addLead(true); }, 3000);
+    }
+  });
+
+  /* световое пятно за курсором на первом экране */
+  const glow = document.querySelector(".hero .glow");
+  const gx = gsap.quickTo(glow, "x", { duration: .9, ease: "power3" });
+  const gy = gsap.quickTo(glow, "y", { duration: .9, ease: "power3" });
+  gsap.set(glow, { x: innerWidth * .7, y: innerHeight * .4 });
+  document.querySelector(".hero").addEventListener("pointermove", e => {
+    const r = e.currentTarget.getBoundingClientRect();
+    gx(e.clientX - r.left); gy(e.clientY - r.top);
+  });
+
+  /* буквы заголовка слегка расходятся при прокрутке вниз */
+  gsap.to(".hero h1 .ln", {
+    xPercent: i => (i % 2 ? 6 : -4), ease: "none",
+    scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true }
+  });
+
+  /* 2. Бегущая строка ускоряется от скорости прокрутки */
+  const marquee = gsap.to("#track", { xPercent: -50, duration: 28, ease: "none", repeat: -1 });
+  let boost = gsap.to({}, {});
+  ScrollTrigger.create({
+    onUpdate: self => {
+      const v = gsap.utils.clamp(-5, 5, self.getVelocity() / 300);
+      boost.kill();
+      boost = gsap.timeline()
+        .to(marquee, { timeScale: (self.direction) * (1 + Math.abs(v)), duration: .2 })
+        .to(marquee, { timeScale: self.direction, duration: 1.2, ease: "power2.out" });
+    }
+  });
+
+  /* 3. Заголовки разделов — проявление строк из-под маски */
+  document.querySelectorAll(".reveal").forEach(h => {
+    gsap.from(h.querySelectorAll(".ln > span"), {
+      yPercent: 110, duration: 1, ease: "expo.out", stagger: .1,
+      scrollTrigger: { trigger: h, start: "top 85%", toggleActions: "play none none reverse" }
+    });
+  });
+
+  /* 4. Горизонтальный путь заявки (только на широких экранах) */
+  const mm = gsap.matchMedia();
+  mm.add("(min-width: 900px)", () => {
+    const rail = document.getElementById("rail");
+    const dist = () => rail.scrollWidth - innerWidth;
+    const scrollTween = gsap.to(rail, {
+      x: () => -dist(), ease: "none",
+      scrollTrigger: { trigger: ".pin-wrap", start: "center center", end: () => "+=" + dist(), pin: true, scrub: 1, invalidateOnRefresh: true }
+    });
+    gsap.utils.toArray(".step").forEach(step => {
+      gsap.from(step.querySelector(".vis"), {
+        scale: .85, opacity: 0, duration: .7, ease: "back.out(1.7)",
+        scrollTrigger: { trigger: step, containerAnimation: scrollTween, start: "left 75%", toggleActions: "play none none reverse" }
+      });
+    });
+  });
+
+  /* 5. Прайс: строки появляются каскадом */
+  gsap.set(".row", { opacity: 0, x: -40 });
+  ScrollTrigger.batch(".row", {
+    start: "top 90%", once: true,
+    onEnter: b => gsap.to(b, { opacity: 1, x: 0, duration: .8, ease: "expo.out", stagger: .07, overwrite: true })
+  });
+
+  /* 6. Карточки наклоняются за курсором */
+  document.querySelectorAll(".tilt").forEach(card => {
+    const rx = gsap.quickTo(card, "rotationX", { duration: .5, ease: "power3" });
+    const ry = gsap.quickTo(card, "rotationY", { duration: .5, ease: "power3" });
+    gsap.set(card, { transformPerspective: 900 });
+    card.addEventListener("pointermove", e => {
+      const r = card.getBoundingClientRect();
+      ry(((e.clientX - r.left) / r.width - .5) * 12);
+      rx(-((e.clientY - r.top) / r.height - .5) * 12);
+    });
+    card.addEventListener("pointerleave", () => { rx(0); ry(0); });
+  });
+
+  /* 7. Этапы: линия прогресса заполняется прокруткой, точки загораются */
+  const sts = gsap.utils.toArray(".st");
+  gsap.to("#stepsBar", {
+    scaleX: 1, ease: "none",
+    scrollTrigger: {
+      trigger: "#stepsGrid", start: "top 75%", end: "bottom 55%", scrub: .6,
+      onUpdate: self => sts.forEach((s, i) => s.classList.toggle("on", self.progress >= i / (sts.length - 1) - .02))
+    }
+  });
+
+  /* 8. Магнитные кнопки */
+  if (matchMedia("(hover: hover)").matches) {
+    document.querySelectorAll(".magnet").forEach(b => {
+      const mx = gsap.quickTo(b, "x", { duration: .4, ease: "power3" });
+      const my = gsap.quickTo(b, "y", { duration: .4, ease: "power3" });
+      b.addEventListener("pointermove", e => {
+        const r = b.getBoundingClientRect();
+        mx((e.clientX - r.left - r.width / 2) * .3);
+        my((e.clientY - r.top - r.height / 2) * .4);
+      });
+      b.addEventListener("pointerleave", () => { mx(0); my(0); });
+    });
+  }
+
+  /* 9. Финальный призыв: блок контактов выезжает с лёгким масштабом */
+  gsap.from(".contact", {
+    scale: .94, borderRadius: 80, ease: "none",
+    scrollTrigger: { trigger: ".contact", start: "top bottom", end: "top 40%", scrub: true }
+  });
+
+  document.fonts && document.fonts.ready.then(() => ScrollTrigger.refresh());
+})();
+</script>
+</body>
+</html>
